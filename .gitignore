@@ -1,0 +1,16 @@
+node_modules/
+package-lock.json
+.env
+.vscode/
+__pycache__/
+build/
+.ipynb_checkpoints
+.DS_Store
+weights/
+config.yaml
+DS_Store
+out.png
+*.pt
+dist/
+*.spec
+
