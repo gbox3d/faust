@@ -21,6 +21,9 @@ huggingface의 transformers 라이브러리를 사용하여 모델을 로드하�
 ### 실행하기  
 
 .env 파일을 생성하고 다음과 같이 실행합니다.  
+(sample.env 파일을 참고하세요.)  
+
+```bash
 
 
 ```bash
