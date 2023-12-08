@@ -1,0 +1,11 @@
+langchain
+tiktoken
+optimum
+python-dotenv
+ctransformers
+bitsandbytes
+scipy
+accelerate
+unstructured
+fastapi
+pydantic
