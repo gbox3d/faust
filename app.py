@@ -20,6 +20,8 @@ packetHeaderCheckCode = 20231208
 request_queue = queue.Queue()
 
 model_name = os.getenv('MODEL_NAME')
+max_length = int(os.getenv('MAX_LENGTH'))
+
 print(f'Start loading {model_name}')
 
 start_tick = time.time()
@@ -32,7 +34,7 @@ hf_pipeline = pipeline(
     tokenizer=tokenizer,
     torch_dtype=torch.float16,
     # load_in_8bit=True,
-    do_sample=False,
+    # do_sample=False,
     #repeat_penalty=1.15,
     # device_map="auto" # GPU 상황에 맞게 자동으로 설정
     device_map="auto"  # GPU 0사용 설정)
@@ -153,7 +155,8 @@ try :
             
             _gen_text = generate_text_interactively(
                 prompt=req_data['prompt'],
-                conn=req_data['conn']
+                conn=req_data['conn'],
+                max_length=max_length
                 )
             
             print(f'generated_text : {_gen_text}')

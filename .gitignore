@@ -13,4 +13,6 @@ out.png
 *.pt
 dist/
 *.spec
+.venv/
+
 
